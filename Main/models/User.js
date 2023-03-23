@@ -35,6 +35,7 @@ User.init(
         len: [8],
       },
     },
+    // TODO: add immage key
   },
   {
     hooks: {

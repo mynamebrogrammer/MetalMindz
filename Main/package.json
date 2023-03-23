@@ -1,16 +1,20 @@
 {
-  "name": "crowd-funding",
+  "name": "metal-mindz",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "seed": "node seeds/seed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mynamebrogrammer/MetalMindz"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "homepage": "https://github.com/mynamebrogrammer/MetalMindz#readme",
   "dependencies": {
     "bcrypt": "^5.0.0",
     "connect-session-sequelize": "^7.0.4",
@@ -27,3 +31,4 @@
     "prettier": "^2.1.2"
   }
 }
+
