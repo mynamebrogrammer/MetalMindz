@@ -1,13 +1,25 @@
 const User = require('./User');
-const Project = require('./Project');
+const Post = require('./Post');
+const Robot = require('./Robot');
 
-User.hasMany(Project, {
+// Future Dev
+// const like
+// const comment
+// const follower
+
+User.belongsToMany(Robot, { through: 'UserRobot' });
+Robot.belongsToMany(User, { through: 'UserRobot' });
+
+// Robot.belongsToMany(User, { foreignKey: 'user_id' });
+// Robot.belongsToMany(Image, { foreignKey: 'image_id' });
+
+User.hasMany(Post, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
 });
 
-Project.belongsTo(User, {
+Post.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-module.exports = { User, Project };
+module.exports = { User, Robot, Post };
