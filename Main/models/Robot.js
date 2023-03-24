@@ -4,14 +4,14 @@ const sequelize = require('../config/connection');
 class Robot extends Model {}
 
 Robot.init(
-    {
-      id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            primaryKey: true,
-            autoIncrement: true,
+ {
+    id: {
+         type: DataTypes.INTEGER,
+         allowNull: false,
+         primaryKey: true,
+         autoIncrement: true,
           },
-      user_id: {
+    user_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
@@ -29,7 +29,7 @@ Robot.init(
       timestamps: false,
       freezeTableName: true,
       underscored: true,
-      modelName: 'like',
+      modelName: 'robot',
     }
   );
   module.exports = Robot;
