@@ -17,19 +17,19 @@ router.post('/', withAuth, async (req, res) => {
 
 router.delete('/:id', withAuth, async (req, res) => {
   try {
-    const robotData = await Robot.destroy({
+    const RobotData = await Robot.destroy({
       where: {
         id: req.params.id,
         user_id: req.session.user_id,
       },
     });
 
-    if (!robotData) {
+    if (!RobotData) {
       res.status(404).json({ message: 'No robot found with this id!' });
       return;
     }
 
-    res.status(200).json(robotData);
+    res.status(200).json(RobotData);
   } catch (err) {
     res.status(500).json(err);
   }

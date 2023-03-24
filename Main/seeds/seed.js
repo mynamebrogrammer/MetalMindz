@@ -40,10 +40,6 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  const robots = await Robot.bulkCreate(robotData, {
-    returning: true,
-  });
-
   for (const post of postData) {
     const user = users[Math.floor(Math.random() * users.length)];
     const robot = robots[Math.floor(Math.random() * robots.length)];

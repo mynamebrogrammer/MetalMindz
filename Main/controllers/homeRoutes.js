@@ -1,11 +1,11 @@
 const router = require('express').Router();
-const { Robot, User } = require('../models');
+const { Robot, User, Post} = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
-    const robotData = await Robot.findAll({
+    // Get all robots and JOIN with user data
+    const RobotData = await Robot.findAll({
       include: [
         {
           model: User,
@@ -15,11 +15,11 @@ router.get('/', async (req, res) => {
     });
 
     // Serialize data so the template can read it
-    const robots = robotData.map((robot) => robot.get({ plain: true }));
+    const Robots = RobotData.map((Robot) => Robot.get({ plain: true }));
 
     // Pass serialized data and session flag into template
     res.render('homepage', { 
-      robots, 
+      Robots, 
       logged_in: req.session.logged_in 
     });
   } catch (err) {
@@ -27,9 +27,9 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/robot/:id', async (req, res) => {
+router.get('/Robot/:id', async (req, res) => {
   try {
-    const robotData = await Robot.findByPk(req.params.id, {
+    const RobotData = await Robot.findByPk(req.params.id, {
       include: [
         {
           model: User,
@@ -38,10 +38,10 @@ router.get('/robot/:id', async (req, res) => {
       ],
     });
 
-    const robot = robotData.get({ plain: true });
+    const Robot = RobotData.get({ plain: true });
 
-    res.render('robot', {
-      ...robot,
+    res.render('Robot', {
+      ...Robot,
       logged_in: req.session.logged_in
     });
   } catch (err) {
@@ -55,7 +55,7 @@ router.get('/profile', withAuth, async (req, res) => {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: robot }],
+      include: [{ model: Robot }],
     });
 
     const user = userData.get({ plain: true });

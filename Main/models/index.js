@@ -1,17 +1,15 @@
 const User = require('./User');
-const Post = require('./Post');
 const Robot = require('./Robot');
+const Post = require('./Post');
 
-// Future Dev
-// const like
-// const comment
-// const follower
+User.hasMany(Robot, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
+});
 
-User.belongsToMany(Robot, { through: 'UserRobot' });
-Robot.belongsToMany(User, { through: 'UserRobot' });
-
-// Robot.belongsToMany(User, { foreignKey: 'user_id' });
-// Robot.belongsToMany(Image, { foreignKey: 'image_id' });
+Robot.belongsTo(User, {
+  foreignKey: 'user_id'
+});
 
 User.hasMany(Post, {
   foreignKey: 'user_id',
@@ -22,4 +20,4 @@ Post.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-module.exports = { User, Robot, Post };
+module.exports = { User, Robot, Post};
