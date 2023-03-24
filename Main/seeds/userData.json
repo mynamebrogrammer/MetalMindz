@@ -1,17 +1,39 @@
 [
   {
-    "name": "Sal",
-    "email": "sal@hotmail.com",
-    "password": "password12345"
+    "username": "KOShea1980",
+    "email": "KOShea1980@metalmindz.com",
+    "password": "password12345",
+    "image": "#"
   },
   {
-    "name": "Lernantino",
-    "email": "lernantino@gmail.com",
-    "password": "password12345"
+    "username": "mynamebrogrammer",
+    "email": "mynamebrogrammer@metalmindz.com",
+    "password": "PASSWORD12345",
+    "image": "#"
   },
   {
-    "name": "Amiko",
-    "email": "amiko2k20@aol.com",
-    "password": "password12345"
+    "username": "BeAwesomeProductions",
+    "email": "BeAwesomeProductions@metalmindz.com",
+    "password": "Beawesome99",
+    "image": "#"
+  },
+  {
+    "username": "BananaSandwiches",
+    "email": "Bananasandwichesaregreat@aol.com",
+    "password": "ilovebananas",
+    "image": "#"
+  },
+  {
+    "username": "ShamelessPlug",
+    "email": "shamelessplug@aol.com",
+    "password": "checkoutmyapp",
+    "image": "#"
+  },
+  {
+    "username": "gamertraxfanboy",
+    "email": "gamertraxfanboy@aol.com",
+    "password": "password12345",
+    "image": "#"
   }
+  
 ]
