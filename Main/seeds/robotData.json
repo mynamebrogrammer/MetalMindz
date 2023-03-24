@@ -26,6 +26,71 @@
     "user_id": 4272,
     "image": "#",
     "year_built": "2023"
+  },
+  {
+    "name": "Trident",
+    "description": "Sideways elevator with pick up abilities from the ground and human player station.",
+    "user_id": 5199,
+    "image": "#",
+    "year_built": "2023"
+  },
+  {
+    "name": "Jesko",
+    "description": "Telescoping arm that takes a handoff from ground pickup on robot.",
+    "user_id": 1577,
+    "image": "#",
+    "year_built": "2023"
+  },
+  {
+    "name": "Whiplash",
+    "description": "Unique octogonal drive train that can shoot cones and cubes accurately to their nodes.",
+    "user_id": 1706,
+    "image": "#",
+    "year_built": "2023"
+  },
+  {
+    "name": "Doffle",
+    "description": "One of the only robots in FRC made primarily out of carbon fiber.  3 game piece and engaged in autonomous.",
+    "user_id": 971,
+    "image": "#",
+    "year_built": "2023"
+  },
+  {
+    "name": "Tai Lung",
+    "description": "Arm driven off an 80:1 gear ratio with a intake + carriage weight of only 16 lbs.",
+    "user_id": 7157,
+    "image": "#",
+    "year_built": "2023"
+  },
+  {
+    "name": "Dexter",
+    "description": "Double-jointed arm that is can place cones on all 3 levels and ground intake accurately shoots cubes on the move.",
+    "user_id": 1690,
+    "image": "#",
+    "year_built": "2023"
+  },
+  {
+    "name": "Genome Xi",
+    "description": "Large double-jointed arm designed for reliable scoring.",
+    "user_id": 2363,
+    "image": "#",
+    "year_built": "2023"
+  },
+  {
+    "name": "Hertz",
+    "description": "Coaxial arm adds to robistness, efficiency, and simplicity.",
+    "user_id": 1712,
+    "image": "#",
+    "year_built": "2023"
+  },
+  {
+    "name": "Genome Xi",
+    "description": "Large double-jointed arm designed for reliable scoring.",
+    "user_id": 2363,
+    "image": "#",
+    "year_built": "2023"
   }
+  
+
  
 ]
