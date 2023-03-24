@@ -1,17 +1,31 @@
 [
   {
-    "name": "Music Near Me",
-    "description": "A mobile app that will send you notifications whenever a concert is playing in your area.",
-    "needed_funding": 5000
+    "name": "Theta",
+    "description": "Double-jointed arm that focuses on reliably scoring on cubes and cones.  Winner of Arizona East Regional Competition.",
+    "user_id": 2659,
+    "image": "#",
+    "year_built": "2023"
   },
   {
-    "name": "The Ultimate Tech Quiz",
-    "description": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!",
-    "needed_funding": 10000
+    "name": "Lockdown",
+    "description": "The only robot in FRC history to go undefeated in official play.",
+    "user_id": 254,
+    "image": "#",
+    "year_built": "2018"
   },
   {
-    "name": "Roll 'Em Up",
-    "description": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes.",
-    "needed_funding": 800
+    "name": "Phantom",
+    "description": "Two-stage cascade rigging telescoping arm capable of scoring on all three levels.",
+    "user_id": 2910,
+    "image": "#",
+    "year_built": "2023"
+  },
+  {
+    "name": "La Cucaracha",
+    "description": "Small 25x25 frame with over 100 3D printed parts with ropeless elevater that uses tiny belts and chain.",
+    "user_id": 4272,
+    "image": "#",
+    "year_built": "2023"
   }
+ 
 ]
