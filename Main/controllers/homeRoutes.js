@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['name'],
+          attributes: ['username'],
         },
       ],
     });
@@ -26,7 +26,7 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
+// TODO: line36 attribute?
 router.get('/Robot/:id', async (req, res) => {
   try {
     const RobotData = await Robot.findByPk(req.params.id, {

@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+const User = require('./User');
 
 class Robot extends Model {}
 
@@ -15,7 +16,7 @@ Robot.init(
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-          model: 'user',
+          model: User,
           key: 'id',
         },
       },
@@ -29,7 +30,7 @@ Robot.init(
       timestamps: false,
       freezeTableName: true,
       underscored: true,
-      modelName: 'robot',
+      // modelName: 'robot',
     }
   );
   module.exports = Robot;
