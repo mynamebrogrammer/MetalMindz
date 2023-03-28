@@ -17,6 +17,7 @@
   "homepage": "https://github.com/mynamebrogrammer/MetalMindz#readme",
   "dependencies": {
     "bcrypt": "^5.0.0",
+    "cloudinary": "^1.35.0",
     "connect-session-sequelize": "^7.0.4",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
@@ -31,4 +32,3 @@
     "prettier": "^2.1.2"
   }
 }
-
