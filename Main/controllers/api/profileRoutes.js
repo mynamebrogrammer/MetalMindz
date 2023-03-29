@@ -2,17 +2,6 @@ const router = require('express').Router();
 const { Post } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.get('/robotProfile', async (req, res) => {
-    try {
-        const postData = await Post.findAll({});
-        const posts = postData.map((post) => post.get({ plain: true }));
-        res.status(200).json(posts);
-    } catch (err) {
-        res.status(500).json(err);
-        console.log('Unable to get posts');
-    }
-    });
-
 router.get('/:id', async (req, res) => {
     try {
         const postData = await Post.findByPk(req.params.id, {});
