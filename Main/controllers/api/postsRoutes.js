@@ -34,8 +34,12 @@ router.post('/', withAuth, async (req, res) => {
       user_id: req.session.user_id,
       
     });
+    res.render('profile', {
+      newPost,
+      logged_in: req.session.logged_in
+      });
     res.status(200).json(newPost);
-    console.log("success");
+      console.log("success");
   } catch (err) {
     res.status(400).json(err);
     console.log("fail");

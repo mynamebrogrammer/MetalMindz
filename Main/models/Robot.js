@@ -28,7 +28,7 @@ Robot.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: User,
+        model: "user",
         key: 'id',
       },
     },
@@ -42,7 +42,7 @@ Robot.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    // modelName: 'robot',
+    modelName: 'robot',
   }
 );
 module.exports = Robot;

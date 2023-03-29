@@ -27,24 +27,25 @@ router.get('/', async (req, res) => {
   }
 });
 // TODO: line36 attribute?
-router.get('/Robot/:id', async (req, res) => {
+router.get('/robot/:id', async (req, res) => {
   try {
     const RobotData = await Robot.findByPk(req.params.id, {
       include: [
         {
           model: User,
-          attributes: ['name'],
+          attributes: ['username'],
         },
       ],
     });
 
-    const Robot = RobotData.get({ plain: true });
+    const robot = RobotData.get({ plain: true });
 
-    res.render('Robot', {
-      ...Robot,
+    res.render('robot', {
+      ...robot,
       logged_in: req.session.logged_in
     });
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });

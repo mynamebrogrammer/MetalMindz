@@ -2,10 +2,12 @@
   <h2>{{name}}</h2>
   <p>{{{get_emoji}}}</p>
   <p>{{description}}</p>
-  <p>Created by {{username}} on {{format_date date_created}}</p>
+  <p>
+    <img src="{{image}}" alt="robot image" />
+  <p>Created by {{username}}</p>
   <p>
     <span for="img" aria-label="money">💲</span>
-    <span class="dollar-amount">{{format_amount needed_funding}}</span>
+    <span class="dollar-amount">{{needed_funding}}</span>
     needed
   </p>
   <p>
