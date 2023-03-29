@@ -37,7 +37,6 @@
 
   <div class="col-md-6 robot-list">
     <h3>Current robots:</h3>
-  {{!-- {{#if robots.length}} --}}
 
     {{#each robots as |robot|}}
     <div class="row mb-2">
@@ -49,7 +48,6 @@
       </div>
     </div>
     {{/each}}
-  {{!-- {{/if}} --}}
   </div>
 </div>
 <script type="text/javascript">
@@ -59,6 +57,7 @@
   }, (error, result) => {
     if (!error && result && result.event === "success") {
       console.log('Done! Here is the image info: ', result.info);
+      {{!-- document.getElementById("image").value = result.info.secure_url; --}}
     }
   });
 
