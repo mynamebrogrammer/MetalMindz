@@ -22,3 +22,24 @@ header, .project:not(:last-child) {
   font-weight: bold;
   margin-left: -5px;
 }
+#main-page {
+  background-color: #2b2d42
+}
+
+.login-bar {
+  color: #D90429
+}
+
+.metal-mindz {
+  color: #edf2f4;
+}
+
+#body-container {
+  background-color: #edf2f4;
+}
+
+.login-text {
+  color: #ef233c;
+}
+
+
