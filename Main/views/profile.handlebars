@@ -33,11 +33,11 @@
     </form>
   </div>
 
-  {{#if robots.length}}
   <div class="col-md-6 robot-list">
     <h3>Current robots:</h3>
+  {{!-- {{#if robots.length}} --}}
 
-    {{#each robots as |robot|}}
+    {{#each Robots as |robot|}}
     <div class="row mb-2">
       <div class="col-md-8">
         <h4><a href="/robot/{{robot.id}}">{{robot.name}}</a></h4>
@@ -47,8 +47,8 @@
       </div>
     </div>
     {{/each}}
+  {{!-- {{/if}} --}}
   </div>
-  {{/if}}
 </div>
 
 <script src="./js/profile.js"></script>

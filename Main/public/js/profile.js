@@ -1,22 +1,20 @@
 const newFormHandler = async (event) => {
   event.preventDefault();
 
-  const name = document.querySelector('#name-signup').value.trim();
+  const name = document.querySelector('#robot-name').value.trim();
   // const needed_funding = document.querySelector('#project-funding').value.trim();
-  const email = document.querySelector('#email-signup').value.trim();
-  const password = document.querySelector('#password-signup').value.trim();
-  const description = document.querySelector('#project-desc').value.trim();
+  const needFunding = document.querySelector('#robot-funding').value.trim();
+  // const img = document.querySelector('#password-signup').value.trim();
+  const description = document.querySelector('#robot-desc').value.trim();
 
-  if (name && email && password) {
-    const response = await fetch(`/api/user`, {
+  if (name && needFunding && description) {
+    const response = await fetch(`/api/robots`, {
       method: 'POST',
-      body: JSON.stringify({ name, email, password, description }),
+      body: JSON.stringify({ name, needFunding, description }),
       headers: {
         'Content-Type': 'application/json',
       },
     });
-    console.log(response);
-
     if (response.ok) {
       document.location.replace('/profile');
       console.log("You are logged in!");
@@ -27,6 +25,7 @@ const newFormHandler = async (event) => {
 };
 
 const delButtonHandler = async (event) => {
+  event.preventDefault();
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
 
@@ -47,5 +46,5 @@ document
   .addEventListener('submit', newFormHandler);
 
 document
-  .querySelector('.project-list')
+  .querySelector('.robot-list')
   .addEventListener('click', delButtonHandler);
