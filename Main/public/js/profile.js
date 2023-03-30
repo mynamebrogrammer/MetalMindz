@@ -8,7 +8,7 @@ const newFormHandler = async (event) => {
   // TODO: const needFunding = document.querySelector('#robot-funding').value.trim();
   const description = document.querySelector('#robot-desc').value.trim();
 
-  if (name && needFunding && description) {
+  if (name && description) {
     const response = await fetch(`/api/robots`, {
       method: 'POST',
       body: JSON.stringify({ name, description }),
