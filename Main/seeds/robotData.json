@@ -2,82 +2,73 @@
   {
     "name": "Theta",
     "description": "Double-jointed arm that focuses on reliably scoring on cubes and cones.  Winner of Arizona East Regional Competition.",
-    "image": "#",
+    "image": "https://res.cloudinary.com/metal-mindz/image/upload/v1680202239/robots/Theta_noge4j.png",
     "year_built": "2023"
   },
   {
     "name": "Lockdown",
     "description": "The only robot in FRC history to go undefeated in official play.",
-    "image": "#",
+    "image": "https://res.cloudinary.com/metal-mindz/image/upload/v1680202241/robots/Lockdown_gpxryi.png",
     "year_built": "2018"
   },
   {
     "name": "Phantom",
     "description": "Two-stage cascade rigging telescoping arm capable of scoring on all three levels.",
-    "image": "#",
+    "image": "https://res.cloudinary.com/metal-mindz/image/upload/v1680202241/robots/Phantom_mjm2up.png",
     "year_built": "2023"
   },
   {
     "name": "La Cucaracha",
     "description": "Small 25x25 frame with over 100 3D printed parts with ropeless elevater that uses tiny belts and chain.",
-    "image": "#",
+    "image": "https://res.cloudinary.com/metal-mindz/image/upload/v1680202242/robots/La_Cucaracha_spjwym.png",
     "year_built": "2023"
   },
   {
     "name": "Trident",
     "description": "Sideways elevator with pick up abilities from the ground and human player station.",
-    "image": "#",
+    "image": "https://res.cloudinary.com/metal-mindz/image/upload/v1680202241/robots/Trident_p5cict.png",
     "year_built": "2023"
   },
   {
     "name": "Jesko",
     "description": "Telescoping arm that takes a handoff from ground pickup on robot.",
-    "image": "#",
+    "image": "https://res.cloudinary.com/metal-mindz/image/upload/v1680202241/robots/Jesko_tyzkv3.png",
     "year_built": "2023"
   },
   {
     "name": "Whiplash",
     "description": "Unique octogonal drive train that can shoot cones and cubes accurately to their nodes.",
-    "image": "#",
+    "image": "https://res.cloudinary.com/metal-mindz/image/upload/v1680202240/robots/Whiplash_wfyq3u.png",
     "year_built": "2023"
   },
   {
     "name": "Doffle",
     "description": "One of the only robots in FRC made primarily out of carbon fiber.  3 game piece and engaged in autonomous.",
-    "image": "#",
+    "image": "https://res.cloudinary.com/metal-mindz/image/upload/v1680202231/robots/Doffle_o8rn7i.png",
     "year_built": "2023"
   },
   {
     "name": "Tai Lung",
     "description": "Arm driven off an 80:1 gear ratio with a intake + carriage weight of only 16 lbs.",
-    "image": "#",
+    "image": "https://res.cloudinary.com/metal-mindz/image/upload/v1680202241/robots/Tai_Lung_b0ywjf.png",
     "year_built": "2023"
   },
   {
     "name": "Dexter",
     "description": "Double-jointed arm that is can place cones on all 3 levels and ground intake accurately shoots cubes on the move.",
-    "image": "#",
+    "image": "https://res.cloudinary.com/metal-mindz/image/upload/v1680202225/robots/Dexter_cpdm93.png",
     "year_built": "2023"
   },
   {
     "name": "Genome Xi",
     "description": "Large double-jointed arm designed for reliable scoring.",
-    "image": "#",
+    "image": "https://res.cloudinary.com/metal-mindz/image/upload/v1680202234/robots/Genome_XI_mlcer8.png",
     "year_built": "2023"
   },
   {
     "name": "Hertz",
     "description": "Coaxial arm adds to robistness, efficiency, and simplicity.",
-    "image": "#",
-    "year_built": "2023"
-  },
-  {
-    "name": "Genome Xi",
-    "description": "Large double-jointed arm designed for reliable scoring.",
-    "image": "#",
+    "image": "https://res.cloudinary.com/metal-mindz/image/upload/v1680202240/robots/Hertz_x2u7sr.png",
     "year_built": "2023"
   }
-  
-
- 
 ]

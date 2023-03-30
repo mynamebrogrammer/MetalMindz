@@ -1,16 +1,17 @@
+const cloudName = 'metal-mindz';
+const unsignedUploadPreset = 'tk4aj6kx';
+
 const newFormHandler = async (event) => {
   event.preventDefault();
 
   const name = document.querySelector('#robot-name').value.trim();
-  // const needed_funding = document.querySelector('#project-funding').value.trim();
-  const needFunding = document.querySelector('#robot-funding').value.trim();
-  // const img = document.querySelector('#password-signup').value.trim();
+  // TODO: const needFunding = document.querySelector('#robot-funding').value.trim();
   const description = document.querySelector('#robot-desc').value.trim();
 
   if (name && needFunding && description) {
     const response = await fetch(`/api/robots`, {
       method: 'POST',
-      body: JSON.stringify({ name, needFunding, description }),
+      body: JSON.stringify({ name, description }),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -25,7 +26,6 @@ const newFormHandler = async (event) => {
 };
 
 const delButtonHandler = async (event) => {
-  // event.preventDefault();
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
 
@@ -40,6 +40,32 @@ const delButtonHandler = async (event) => {
     }
   }
 };
+
+const myWidget = cloudinary.createUploadWidget(
+  {
+    cloudName: cloudName,
+    uploadPreset: unsignedUploadPreset,
+  },
+  (error, result) => {
+    if (!error && result && result.event === 'success') {
+      console.log('Done! Here is the image info: ', result.info);
+      document
+        .getElementById('robot-img')
+        .setAttribute('src', result.info.secure_url);
+        console.log(result.info.secure_url);
+    }
+  }
+);
+
+document
+  .getElementById('upload_widget').addEventListener(
+    'click',
+    function () {
+      myWidget.open();
+    },
+    false
+  );
+
 
 document
   .querySelector('.new-robot-form')

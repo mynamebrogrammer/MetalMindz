@@ -34,7 +34,7 @@ Robot.init(
     },
     image: {
       type: DataTypes.STRING,
-      defaultValue: '#',
+      defaultValue: `https://res.cloudinary.com/metal-mindz/image/list/`,
     },
   },
   {
