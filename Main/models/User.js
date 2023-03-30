@@ -35,7 +35,6 @@ User.init(
         len: [8],
       },
     },
-    // TODO: add immage placeholder https:  Whatever css we use
     image: {
       type: DataTypes.STRING,
       defaultValue: '#',
