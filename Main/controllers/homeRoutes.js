@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['name'],
+          attributes: ['username'],
         },
       ],
     });
@@ -26,25 +26,26 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-router.get('/Robot/:id', async (req, res) => {
+// TODO: line36 attribute?
+router.get('/robot/:id', async (req, res) => {
   try {
     const RobotData = await Robot.findByPk(req.params.id, {
       include: [
         {
           model: User,
-          attributes: ['name'],
+          attributes: ['username'],
         },
       ],
     });
 
-    const Robot = RobotData.get({ plain: true });
+    const robot = RobotData.get({ plain: true });
 
-    res.render('Robot', {
-      ...Robot,
+    res.render('robot', {
+      ...robot,
       logged_in: req.session.logged_in
     });
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
@@ -59,8 +60,9 @@ router.get('/profile', withAuth, async (req, res) => {
     });
 
     const user = userData.get({ plain: true });
-
-    res.render('profile', {
+    console.log(user.Robots);
+;
+    res.render('userProfile', {
       ...user,
       logged_in: true
     });

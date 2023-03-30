@@ -1,0 +1,73 @@
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{username}}!</h2>
+  </div>
+</div>
+<head>
+  <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+</head>
+<body>
+  <div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Initiate RoboPersona:</h3>
+
+    <form class="form new-robot-form">
+      <div class="form-group">
+        <label for="robot-name">Robot name:</label>
+        <input class="form-input" type="text" id="robot-name" name="robot-name" />
+      </div>
+      <div class="form-group">
+        <label for="robot-funding">need funding ($):</label>
+        <input class="form-input" type="number" id="robot-funding" name="robot-funding" />
+      </div>
+      <div class="form-group">
+        <button id="upload_widget" class="cloudinary-button">Upload Robot Picture</button>
+
+      </div>
+
+      <div class="form-group">
+        <label for="robot-desc">description:</label>
+        <textarea class="form-input" id="robot-desc" name="robot-desc"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Create</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="col-md-6 robot-list">
+    <h3>Current robots:</h3>
+
+    {{#each robots as |robot|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <a href="./robot/{{robot.id}}"><h4> {{robot.name}}</h4></a>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{robot.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>
+<script>
+  var myWidget = cloudinary.createUploadWidget({
+  cloudName: 'metal-mindz',
+  uploadPreset: 'tk4aj6kx'
+}, (error, result) => {
+  if (!error && result && result.event === "success") {
+    console.log('Done! Here is the image info: ', result.info);
+    document.getElementById("#image").value = result.info.secure_url;
+  }
+});
+
+document.getElementById("upload_widget").addEventListener("click", function(){
+  myWidget.open();
+}, false);
+</script>
+
+</body>
+
+
+
+<script src="./js/profile.js"></script>

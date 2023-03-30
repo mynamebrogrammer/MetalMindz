@@ -2,6 +2,49 @@ const router = require('express').Router();
 const { Robot } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+router.get('/', withAuth, async (req, res) => {
+
+
+
+  try {
+    const robotData = await Robot.findAll({
+      where: {
+        user_id: req.session.user_id,
+      },
+    });
+    const robots = robotData.map((robot) => robot.get({ plain: true }));
+
+    res.status(200).json(robots);
+  } catch (err) {
+    res.status(500).json(err);
+    console.log("Unable to get robots");
+  }
+});
+
+router.get('/:id', withAuth, async (req, res) => {
+  try {
+    const robotData = await Robot.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
+    });
+    
+    if (!robotData) {
+      res.status(404).json({ message: 'No robot found with this id!' });
+      return;
+    }
+    
+    const robot = robotData.get({ plain: true });
+
+    res.status(200).json(robot);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.post('/', withAuth, async (req, res) => {
   try {
     const newRobot = await Robot.create({

@@ -377,6 +377,9 @@ h1 {
 
 h2 {
   font-size: 2rem;
+  color: #2b2d42;
+  text-align: center;
+  background-color: #edf2f4;
 }
 
 h3 {
@@ -535,7 +538,7 @@ a:hover {
 }
 
 .mt-5 {
-  margin-top: 1.625rem;
+  padding-top: 1.625rem;
 }
 
 .mt-auto {
@@ -1009,7 +1012,7 @@ a:hover {
 }
 
 .btn.btn-primary {
-  background-color: #2d3e50;
+  background-color: #ef233c;
   color: #d9e9e8;
 }
 

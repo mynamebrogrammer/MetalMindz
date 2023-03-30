@@ -11,22 +11,22 @@ Post.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    post_image: {
-      type: DataTypes.TEXT,
+    // post_image: {
+    //   type: DataTypes.TEXT,
+    //   allowNull: false,
+    // },
+    name: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
-    // name: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false,
-    // },
-    // description: {
-    //   type: DataTypes.STRING,
-    // },
-    // date_created: {
-    //   type: DataTypes.DATE,
-    //   allowNull: false,
-    //   defaultValue: DataTypes.NOW,
-    // },
+    description: {
+      type: DataTypes.STRING,
+    },
+    date_created: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {

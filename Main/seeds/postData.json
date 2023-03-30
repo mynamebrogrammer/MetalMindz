@@ -1,6 +1,18 @@
 [
-    {
-        "description": " ",
-        "user_id": "1"
-    }
+  {
+    
+    "name": "First Post",
+    "description": "This is the first post.",
+    "date_created": "2023-03-28T10:00:00Z"
+  },
+  {
+    "name": "Second Post",
+    "description": "This is the second post.",
+    "date_created": "2023-03-29T11:00:00Z"
+  },
+  {
+    "name": "Third Post",
+    "description": "This is the third post.",
+    "date_created": "2023-03-30T12:00:00Z"
+  }
 ]

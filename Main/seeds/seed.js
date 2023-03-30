@@ -25,6 +25,7 @@
 
 // seedDatabase();
 
+
 const sequelize = require('../config/connection');
 const { User, Robot, Post } = require('../models');
 
@@ -39,6 +40,21 @@ const seedDatabase = async () => {
     individualHooks: true,
     returning: true,
   });
+console.log(users);
+ 
+
+  for (const robot of robotData) {
+    const user = users[Math.floor(Math.random() * users.length)];
+    // const robot = robots[Math.floor(Math.random() * robots.length)];
+
+    await Robot.create({
+      ...robot,
+      user_id: user.id,
+      // robot_id: robot.id,
+    });
+  }
+const robots = await Robot.findAll()
+console.log(robots);
 
   for (const post of postData) {
     const user = users[Math.floor(Math.random() * users.length)];
@@ -50,7 +66,6 @@ const seedDatabase = async () => {
       robot_id: robot.id,
     });
   }
-
   process.exit(0);
 };
 
