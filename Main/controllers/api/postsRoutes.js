@@ -2,9 +2,13 @@ const router = require('express').Router();
 const { Post } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
-    const postData = await Post.findAll({});
+    const postData = await Post.findAll({
+      where: {
+        user_id: req.session.user_id,
+      },
+    });
     const posts = postData.map((post) => post.get({ plain: true }));
     res.status(200).json(posts);
   } catch (err) {
@@ -13,9 +17,17 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', withAuth, async (req, res) => {
     try {
-        const postData = await Post.findByPk(req.params.id, {});
+        const postData = await Post.findByPk(req.params.id, {
+            include: [
+                {
+                    model: User,
+                    attributes: ['name'],
+                },
+            ],
+        });
+
         if (!postData) {
             res.status(404).json({ message: 'No post found with this id!' });
             return;

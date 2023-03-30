@@ -2,12 +2,16 @@ const router = require('express').Router();
 const { Robot } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
+
+
+
   try {
     const robotData = await Robot.findAll({
+      where: {
+        user_id: req.session.user_id,
+      },
     });
-    console.log(robotData);
-
     const robots = robotData.map((robot) => robot.get({ plain: true }));
 
     res.status(200).json(robots);
@@ -17,9 +21,15 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/:id', async (req, res) => {
+router.get('/:id', withAuth, async (req, res) => {
   try {
     const robotData = await Robot.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
     });
     
     if (!robotData) {
