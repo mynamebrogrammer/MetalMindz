@@ -24,7 +24,7 @@
         <a href="/profile">profile</a> |
         <button class= "no-button" id="logout">logout</button>
         {{else}}
-        <a href="/login" class="brand-logo center">Login</a>
+        <a href="/login" class="brand-logo center">Login/Sign-up</a>
         {{/if}}
       </nav>
     </header>
@@ -32,9 +32,29 @@
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
-    <footer>
-      
-    </footer>
+    <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Useful FRC Links</h5>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="www.chiefdelphi.com">Chief Delphi</a></li>
+                  <li><a class="grey-text text-lighten-3" href="thebluealliance.com">The Blue Alliance</a></li>
+                  <li><a class="grey-text text-lighten-3" href="statbotics.io">Statbotics</a></li>
+                  <li><a class="grey-text text-lighten-3" href="firstinspires.org">FIRST Inspires</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2023 Copyright Text
+            </div>
+          </div>
+        </footer>
   </div>
 
   <!-- Render script for logged in users only -->
