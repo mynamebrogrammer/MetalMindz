@@ -3,9 +3,6 @@ const { Robot } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
-
-
-
   try {
     const robotData = await Robot.findAll({
       where: {
@@ -17,7 +14,7 @@ router.get('/', withAuth, async (req, res) => {
     res.status(200).json(robots);
   } catch (err) {
     res.status(500).json(err);
-    console.log("Unable to get robots");
+    console.log('Unable to get robots');
   }
 });
 
@@ -31,12 +28,12 @@ router.get('/:id', withAuth, async (req, res) => {
         },
       ],
     });
-    
+
     if (!robotData) {
       res.status(404).json({ message: 'No robot found with this id!' });
       return;
     }
-    
+
     const robot = robotData.get({ plain: true });
 
     res.status(200).json(robot);
@@ -45,7 +42,7 @@ router.get('/:id', withAuth, async (req, res) => {
   }
 });
 
-router.post('/', withAuth, async (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const newRobot = await Robot.create({
       ...req.body,

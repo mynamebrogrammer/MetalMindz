@@ -11,10 +11,6 @@ Post.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    // post_image: {
-    //   type: DataTypes.TEXT,
-    //   allowNull: false,
-    // },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
