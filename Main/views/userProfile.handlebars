@@ -14,7 +14,7 @@
     <form class="form new-robot-form">
       <div class="form-group">
         <label for="robot-name">Robot name:</label>
-        <input class="form-input" type="text" id="robot-name" name="robot-name" />
+        <textarea class="form-input" id="robot-name" name="robot-name"></textarea>
       </div>
 
       {{!-- TODO: FUTURE DEV --}}
@@ -30,14 +30,17 @@
       </div>
 
       <div class="form-group">
-        <label for="robot-desc">description:</label>
+        <label for="robot-desc">Description:</label>
         <textarea class="form-input" id="robot-desc" name="robot-desc"></textarea>
       </div>
-      <img id="robot-img" src="" />
-      </img>
+      
+      <div class="form-group">
+        <label for="year-built">Year Built:</label>
+        <textarea class="form-input" id="year-built" name="year-built"></textarea>
+      </div>
 
       <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
+        <button type="submit" class="btn-primary">Create</button>
       </div>
     </form>
   </div>
@@ -50,7 +53,7 @@
         <a href="./robot/{{robot.id}}"><h4> {{robot.name}}</h4></a>
       </div>
       <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{robot.id}}">DELETE</button>
+        <button class="btn-danger" data-id="{{robot.id}}">DELETE</button>
       </div>
     </div>
     {{/each}}
