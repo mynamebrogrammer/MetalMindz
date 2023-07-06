@@ -25,7 +25,7 @@ To use this app, simply create a profile , upload photos of your robots, and joi
 Here is the link to the deployed app: [MetalMindz](https://metal-mindz.herokuapp.com/)
 
 ## Screenshots
-![Screenshot](./Main/public/Assets/upliftify-ai-homepage-ss.png)
+![Screenshot](./Main/public/Assets/metal-mindz-BeAwe-ss.png)
 
 ## Contributing
 
