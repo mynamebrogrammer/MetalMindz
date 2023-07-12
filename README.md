@@ -4,7 +4,7 @@
 
 ## Description
 
-MetalMindz is a social app for FRC robot builders. Show off your creations, connect with others, and get inspired. Simply create a profile, upload photos of your robots, and join a community of like-minded enthusiasts.
+ MetalMindz is a social app for FRC robot builders. Show off your creations, connect with others, and get inspired. Simply create a profile, upload photos of your robots, and join a community of like-minded enthusiasts.
 
 ## Table of Contents
 
